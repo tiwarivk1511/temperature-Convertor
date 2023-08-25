@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#17181A"
+    tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Temperature Converter"
+        android:textSize="24sp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/celsiusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTextView"
+        android:text="Celsius (°C)"
+        android:textSize="18sp"
+        android:textColor="#CCC"/>
+
+    <EditText
+        android:id="@+id/celsiusEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/celsiusLabel"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_bg"
+        android:hint="Enter Celsius"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:shadowRadius="10"
+        android:textColor="#7F7F7F" />
+
+    <TextView
+        android:id="@+id/fahrenheitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/celsiusEditText"
+        android:text="Fahrenheit (°F)"
+        android:textSize="18sp"
+        android:textColor="#CCC"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/fahrenheitEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/fahrenheitLabel"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_bg"
+        android:hint="Enter Fahrenheit"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:shadowRadius="10"
+        android:textColor="#7F7F7F" />
+
+    <TextView
+        android:id="@+id/kalvinLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fahrenheitEditText"
+        android:layout_marginTop="16dp"
+        android:text="Kalvin (°K)"
+        android:textColor="#CCC"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/kalvinEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/kalvinLabel"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_bg"
+        android:hint="Enter Kalvin"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:shadowRadius="10"
+        android:textColor="#7F7F7F" />
+
+    <TextView
+        android:id="@+id/resultTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kalvinEditText"
+        android:layout_marginTop="13dp"
+        android:text="Result"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/convertedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resultTxt"
+        android:textAlignment="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="0dp"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/convertButton"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/convertedTextView"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#1991FF"
+        android:paddingStart="25dp"
+        android:paddingEnd="20dp"
+        android:text="Convert"
+        android:fontFamily="serif"
+        android:textStyle="bold|italic"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/convertButton"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="-46dp"
+        android:layout_toEndOf="@+id/convertButton"
+        android:backgroundTint="#1991FF"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="Clear"
+        android:fontFamily="serif"
+        android:textStyle="bold|italic"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtDesignedBy"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/clearButton"
+        android:layout_alignStart="@+id/clearButton"
+        android:layout_alignEnd="@+id/clearButton"
+        android:layout_marginStart="-74dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="110dp"
+        android:text="Designed By"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/txtDeveloper"
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDesignedBy"
+        android:layout_alignStart="@+id/txtDesignedBy"
+        android:layout_alignEnd="@+id/txtDesignedBy"
+        android:layout_marginStart="-24dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="-13dp"
+        android:text="Vikash Tiwari"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+
+</RelativeLayout>
